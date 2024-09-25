@@ -1,0 +1,21 @@
+.add-location {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-location .fa-plus {
+    margin-right: 10px;
+}
+
+.add-location:hover {
+    background-color: #0056b3;
+}
+
+
+

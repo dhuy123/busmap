@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+     body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .center-form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h3 {
+           position: absolute;
+           bottom: 20px;
+           left: 646;
+        }
+</style>
+<body>
+   <div class="container">
+    <form action="{{url_for('update')}}" method="post" class="center-form">
+        <h4>Sửa thông tin điểm {{name}}</h4><br>
+        ID Cũ<input type="text" value="{{cur_id}}" name="cur_id" class="form-control">
+        ID Mới<input type="text" value="{{cur_id}}" name="new_id"class="form-control">
+        Tên<input type="text" value="{{name}}" name="new_name"class="form-control">
+        Lat,Lng<input type="text" value="{{latlng}}"  name="latlng"class="form-control"><br>
+        <input type="submit" value="Sửa" class="btn btn-success">
+        <a href="{{url_for('home')}}">Back</a>
+        <h3>{{result}}</h3>
+    </form>
+   </div>
+</body>
+</html>
